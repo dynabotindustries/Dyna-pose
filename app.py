@@ -1,15 +1,14 @@
 import os
 import streamlit as st
-import cv2
 import numpy as np
 import mediapipe as mp
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 import av
+import cv2  # Import after setting environment variables
 
-# Fix OpenCV GUI errors on Streamlit Community Cloud
+# ✅ Prevent OpenCV from using GUI-based rendering
 os.environ["PYOPENGL_PLATFORM"] = "egl"
-os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
-os.environ["DISPLAY"] = ""  # Prevents OpenCV from using GUI functions
+os.environ["DISPLAY"] = ""  # Ensures OpenCV doesn't attempt to use a display server
 
 # Initialize MediaPipe Pose
 mp_pose = mp.solutions.pose
