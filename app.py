@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import mediapipe as mp
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
+import av
 
 # Initialize MediaPipe Pose
 mp_pose = mp.solutions.pose
