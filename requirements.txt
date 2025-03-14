@@ -1,6 +1,6 @@
-tensorflow
-tensorflow-hub
-opencv-python-headless
-numpy
 streamlit
 streamlit-webrtc
+opencv-python-headless
+mediapipe
+numpy
+av
