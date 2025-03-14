@@ -1,14 +1,15 @@
 import os
 import streamlit as st
 import numpy as np
-import mediapipe as mp
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase
 import av
-import cv2  # Import after setting environment variables
 
-# ✅ Prevent OpenCV from using GUI-based rendering
+# ✅ Prevent OpenCV & Mediapipe from using GUI-based rendering
 os.environ["PYOPENGL_PLATFORM"] = "egl"
 os.environ["DISPLAY"] = ""  # Ensures OpenCV doesn't attempt to use a display server
+
+import cv2  # Import AFTER setting environment variables
+import mediapipe as mp
 
 # Initialize MediaPipe Pose
 mp_pose = mp.solutions.pose
